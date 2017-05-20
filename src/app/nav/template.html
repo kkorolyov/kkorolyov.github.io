@@ -1,10 +1,10 @@
 <nav>
   <h1>kkorolyov's GitHub Thingies</h1>
 
-  <ngb-tabset>
-    <ngb-tab *ngFor="let project of projects">
+  <ngb-tabset (tabChange)="tabChange($event)">
+    <ngb-tab id="{{project.title}}" *ngFor="let project of projects">
       <ng-template ngbTabTitle>
-        <h4 (click)="go(project.title)">{{project.title}}</h4>
+        <h4>{{project.title}}</h4>
       </ng-template>
       <ng-template ngbTabContent></ng-template>
     </ngb-tab>

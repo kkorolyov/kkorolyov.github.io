@@ -2,16 +2,15 @@ import { BrowserModule } from '@angular/platform-browser'
 import { NgModule } from '@angular/core'
 import { FormsModule } from '@angular/forms'
 import { HttpModule } from '@angular/http'
-
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
 
-import { RoutingModule } from './routing.module'
+import { RoutingModule } from 'app/routing'
 
-import { ProjectParserService } from './service/project-parser.service'
+import { ProjectParserService } from 'app/services/project-parser'
 
-import { AppComponent } from './app.component'
-import { ProjectComponent } from './project/project.component';
-import { NavComponent } from './nav/nav.component';
+import { RootComponent } from './component'
+import { NavComponent } from './nav/component';
+import { ProjectComponent } from './project/component';
 
 @NgModule({
 	imports: [
@@ -22,13 +21,13 @@ import { NavComponent } from './nav/nav.component';
 		RoutingModule
 	],
 	declarations: [
-		AppComponent,
+		RootComponent,
 		ProjectComponent,
 		NavComponent
 	],
 	providers: [
 		ProjectParserService
 	],
-	bootstrap: [AppComponent]
+	bootstrap: [RootComponent]
 })
-export class AppModule { }
+export class RootModule { }

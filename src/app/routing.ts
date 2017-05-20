@@ -1,12 +1,14 @@
 import { NgModule, Injectable } from '@angular/core'
 import { RouterModule, ActivatedRouteSnapshot, RouterStateSnapshot, Resolve } from '@angular/router'
 
-import { ProjectParserService } from './service/project-parser.service'
+import { ProjectParserService } from 'app/services/project-parser'
 
-import { ProjectComponent } from './project/project.component'
+import { ProjectComponent } from 'app/project/component'
+
+import { Project } from 'types'
 
 @Injectable()
-class ProjectResolver implements Resolve<any> {
+export class ProjectResolver implements Resolve<Project> {
   constructor(private parser: ProjectParserService) { }
 
   resolve(route: ActivatedRouteSnapshot) {
