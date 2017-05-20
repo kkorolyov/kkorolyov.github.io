@@ -1,0 +1,10 @@
+{
+	"title": "SimpleLogs",
+	"description": "(Yet another) logging library for logging system messages to various outputs with minimal effort.",
+	"version": "3.0.1",
+	"github": "https://github.com/kkorolyov/SimpleLogs",
+	"bintray": {
+		"badge": "https://api.bintray.com/packages/kkorolyov/java/simple-logs/images/download.svg",
+		"url": "https://bintray.com/kkorolyov/java/simple-logs/_latestVersion"
+	}
+}

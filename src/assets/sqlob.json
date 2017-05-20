@@ -1,0 +1,10 @@
+{
+	"title": "SQLOb",
+	"description": "A lightweight Java ORM library for persisting Java objects in a SQL database.",
+	"version": "3.0",
+	"github": "https://github.com/kkorolyov/SQLOb",
+	"bintray": {
+		"badge": "https://api.bintray.com/packages/kkorolyov/java/sqlob/images/download.svg",
+		"url": "https://bintray.com/kkorolyov/java/sqlob/_latestVersion"
+	}
+}
