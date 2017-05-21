@@ -1,11 +1,13 @@
 webpackJsonp([1,4],{
 
-/***/ 130:
+/***/ 131:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_types__ = __webpack_require__(169);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_types__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProjectComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -16,6 +18,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 var ProjectComponent = (function () {
@@ -33,18 +36,18 @@ var ProjectComponent = (function () {
 }());
 __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["O" /* Input */])(),
-    __metadata("design:type", Object)
+    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2_types__["Project"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_types__["Project"]) === "function" && _a || Object)
 ], ProjectComponent.prototype, "project", void 0);
 ProjectComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_0" /* Component */])({
         selector: 'kgi-project',
-        template: __webpack_require__(226),
-        styles: [__webpack_require__(223)]
+        template: __webpack_require__(227),
+        styles: [__webpack_require__(224)]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* ActivatedRoute */]) === "function" && _a || Object])
+    __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* ActivatedRoute */]) === "function" && _b || Object])
 ], ProjectComponent);
 
-var _a;
+var _a, _b;
 //# sourceMappingURL=component.js.map
 
 /***/ }),
@@ -106,7 +109,7 @@ var RootComponent = (function () {
 RootComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_0" /* Component */])({
         selector: 'kgi-root',
-        template: __webpack_require__(227)
+        template: __webpack_require__(228)
     })
 ], RootComponent);
 
@@ -121,13 +124,13 @@ RootComponent = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(84);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(85);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ng_bootstrap_ng_bootstrap__ = __webpack_require__(162);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_app_routing__ = __webpack_require__(167);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_app_services_project_parser__ = __webpack_require__(57);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__component__ = __webpack_require__(164);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__nav_component__ = __webpack_require__(166);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__project_component__ = __webpack_require__(130);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__project_component__ = __webpack_require__(131);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RootModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -197,9 +200,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var NavComponent = (function () {
     function NavComponent(router, projectParser) {
+        var _this = this;
         this.router = router;
         this.projectParser = projectParser;
-        this.projects = this.projectParser.getAll();
+        this.projectParser.getAll()
+            .subscribe(function (projects) { return _this.projects = projects; });
     }
     NavComponent.prototype.go = function (name) {
         this.router.navigate(['/project', name]);
@@ -212,8 +217,8 @@ var NavComponent = (function () {
 NavComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_0" /* Component */])({
         selector: 'kgi-nav',
-        template: __webpack_require__(225),
-        styles: [__webpack_require__(222)]
+        template: __webpack_require__(226),
+        styles: [__webpack_require__(223)]
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2_app_services_project_parser__["a" /* ProjectParserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_app_services_project_parser__["a" /* ProjectParserService */]) === "function" && _b || Object])
 ], NavComponent);
@@ -230,7 +235,7 @@ var _a, _b;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(40);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_app_services_project_parser__ = __webpack_require__(57);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_app_project_component__ = __webpack_require__(130);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_app_project_component__ = __webpack_require__(131);
 /* unused harmony export ProjectResolver */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RoutingModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -305,21 +310,10 @@ var environment = {
 
 /***/ }),
 
-/***/ 222:
-/***/ (function(module, exports, __webpack_require__) {
+/***/ 169:
+/***/ (function(module, exports) {
 
-exports = module.exports = __webpack_require__(36)(false);
-// imports
-
-
-// module
-exports.push([module.i, "", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
+//# sourceMappingURL=types.js.map
 
 /***/ }),
 
@@ -341,28 +335,46 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ 225:
-/***/ (function(module, exports) {
+/***/ 224:
+/***/ (function(module, exports, __webpack_require__) {
 
-module.exports = "<nav>\n  <h1>kkorolyov's GitHub Thingies</h1>\n\n  <ngb-tabset (tabChange)=\"tabChange($event)\">\n    <ngb-tab id=\"{{project.title}}\" *ngFor=\"let project of projects\">\n      <ng-template ngbTabTitle>\n        <h4>{{project.title}}</h4>\n      </ng-template>\n      <ng-template ngbTabContent></ng-template>\n    </ngb-tab>\n  </ngb-tabset>\n</nav>"
+exports = module.exports = __webpack_require__(36)(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
 
 /***/ }),
 
 /***/ 226:
 /***/ (function(module, exports) {
 
-module.exports = "<h1>{{project.title}}</h1>\n<h2>{{project.description}}</h2>\n<h4>Current version: {{project.version}}</h4>\n"
+module.exports = "<nav>\n  <h1>kkorolyov's GitHub Thingies</h1>\n\n  <ngb-tabset (tabChange)=\"tabChange($event)\">\n    <ngb-tab id=\"{{project.title}}\" *ngFor=\"let project of projects\">\n      <ng-template ngbTabTitle>\n        <h4>{{project.title}}</h4>\n      </ng-template>\n      <ng-template ngbTabContent></ng-template>\n    </ngb-tab>\n  </ngb-tabset>\n</nav>"
 
 /***/ }),
 
 /***/ 227:
 /***/ (function(module, exports) {
 
+module.exports = "<h1>{{project.title}}</h1>\n<h2>{{project.description}}</h2>\n<h4>Current version: {{project.version}}</h4>\n\n<a href=\"{{project.github}}\"><img src=\"assets/github.png\" alt=\"GitHub\"></a>\n<a href=\"{{project.bintray.url}}\"><img src=\"{{project.bintray.badge}}\" alt=\"Bintray\"></a>\n"
+
+/***/ }),
+
+/***/ 228:
+/***/ (function(module, exports) {
+
 module.exports = "<kgi-nav></kgi-nav>\n\n<router-outlet></router-outlet>\n"
 
 /***/ }),
 
-/***/ 261:
+/***/ 263:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(155);
@@ -375,7 +387,9 @@ module.exports = __webpack_require__(155);
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(84);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(85);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(233);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProjectParserService; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -388,27 +402,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
 var ProjectParserService = (function () {
     function ProjectParserService(http) {
-        var _this = this;
         this.http = http;
-        this.jsons = [
-            'sqlob',
-            'simple-logs',
-            'simple-props'
-        ];
-        this.projects = [];
-        for (var _i = 0, _a = this.jsons; _i < _a.length; _i++) {
-            var json = _a[_i];
-            http.get("assets/" + json + ".json")
-                .subscribe(function (res) { return _this.projects.push(res.json()); });
-        }
     }
     ProjectParserService.prototype.get = function (title) {
-        return this.projects.filter(function (p) { return p.title.indexOf(title) >= 0; })[0];
+        return this.getAll()
+            .map(function (projects) { return projects.filter(function (p) { return p.title.indexOf(title) >= 0; })[0]; });
     };
     ProjectParserService.prototype.getAll = function () {
-        return this.projects;
+        return this.http.get('assets/projects.json')
+            .map(function (res) { return res.json(); });
     };
     return ProjectParserService;
 }());
@@ -422,5 +427,5 @@ var _a;
 
 /***/ })
 
-},[261]);
+},[263]);
 //# sourceMappingURL=main.bundle.js.map

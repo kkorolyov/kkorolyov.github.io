@@ -1,3 +1,11 @@
-<h1>{{project.title}}</h1>
+<header>
+	<h1>{{project.title}}</h1>
+
+	<span>
+		<a href="{{project.bintray.url}}"><img src="{{project.bintray.badge}}" alt="Bintray"></a>
+		<a href="{{project.github}}"><img src="assets/github.png" alt="GitHub"></a>
+	</span>
+</header>
+
 <h2>{{project.description}}</h2>
 <h4>Current version: {{project.version}}</h4>

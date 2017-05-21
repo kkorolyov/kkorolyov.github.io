@@ -15,7 +15,8 @@ export class NavComponent {
   projects: Project[]
 
   constructor(private router: Router, private projectParser: ProjectParserService) {
-    this.projects = this.projectParser.getAll()
+    this.projectParser.getAll()
+      .subscribe(projects => this.projects = projects)
   }
 
   go(name: string): void {

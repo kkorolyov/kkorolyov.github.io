@@ -1,0 +1,32 @@
+[
+	{
+		"title": "SimpleLogs",
+		"description": "(Yet another) logging library for logging system messages to various outputs with minimal effort.",
+		"version": "3.0.1",
+		"github": "https://github.com/kkorolyov/SimpleLogs",
+		"bintray": {
+			"badge": "https://api.bintray.com/packages/kkorolyov/java/simple-logs/images/download.svg",
+			"url": "https://bintray.com/kkorolyov/java/simple-logs/_latestVersion"
+		}
+	},
+	{
+		"title": "SimpleProps",
+		"description": "A simple Java API for writing and reading application properties to and from files.",
+		"version": "4.0",
+		"github": "https://github.com/kkorolyov/SimpleProps",
+		"bintray": {
+			"badge": "https://api.bintray.com/packages/kkorolyov/java/simple-props/images/download.svg",
+			"url": "https://bintray.com/kkorolyov/java/simple-props/_latestVersion"
+		}
+	},
+	{
+		"title": "SQLOb",
+		"description": "A lightweight Java ORM library for persisting Java objects in a SQL database.",
+		"version": "3.0",
+		"github": "https://github.com/kkorolyov/SQLOb",
+		"bintray": {
+			"badge": "https://api.bintray.com/packages/kkorolyov/java/sqlob/images/download.svg",
+			"url": "https://bintray.com/kkorolyov/java/sqlob/_latestVersion"
+		}
+	}
+]
