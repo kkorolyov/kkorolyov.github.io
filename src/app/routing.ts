@@ -3,6 +3,7 @@ import { RouterModule, ActivatedRouteSnapshot, RouterStateSnapshot, Resolve } fr
 
 import { ProjectParserService } from 'app/services/project-parser'
 
+import { InfoComponent } from 'app/info/component'
 import { ProjectComponent } from 'app/project/component'
 
 import { Project } from 'types'
@@ -20,11 +21,19 @@ export class ProjectResolver implements Resolve<Project> {
   imports: [
     RouterModule.forRoot([
       {
+        path: 'info',
+        component: InfoComponent
+      },
+      {
         path: 'project/:project',
         component: ProjectComponent,
         resolve: {
           project: ProjectResolver
         }
+      },
+      {
+        path: '**',
+        redirectTo: '/info'
       }
     ])
   ],

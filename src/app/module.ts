@@ -9,8 +9,9 @@ import { RoutingModule } from 'app/routing'
 import { ProjectParserService } from 'app/services/project-parser'
 
 import { RootComponent } from './component'
-import { NavComponent } from './nav/component';
-import { ProjectComponent } from './project/component';
+import { NavComponent } from './nav/component'
+import { InfoComponent } from './info/component'
+import { ProjectComponent } from './project/component'
 
 @NgModule({
 	imports: [
@@ -23,6 +24,7 @@ import { ProjectComponent } from './project/component';
 	declarations: [
 		RootComponent,
 		ProjectComponent,
+		InfoComponent,
 		NavComponent
 	],
 	providers: [
