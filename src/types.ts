@@ -7,4 +7,6 @@ export interface Project {
 		badge: string
 		url: string
 	}
+	website: string
+	images: string[]
 }

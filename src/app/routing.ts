@@ -4,25 +4,24 @@ import { RouterModule, ActivatedRouteSnapshot, RouterStateSnapshot, Resolve } fr
 import { ParserService } from 'app/services/parser'
 
 import { InfoComponent } from 'app/info/component'
-import { LibrariesComponent } from 'app/libraries/component'
-import { ApplicationsComponent } from 'app/applications/component'
+import { ProjectsComponent } from 'app/projects/component'
 
-import { Library, Application } from 'types'
+import { Project } from 'types'
 
 @Injectable()
-export class LibrariesResolver implements Resolve<Library> {
+export class LibrariesResolver implements Resolve<Project[]> {
   constructor(private parser: ParserService) { }
 
   resolve(route: ActivatedRouteSnapshot) {
-    return this.parser.getLibrary()
+    return this.parser.get({ images: undefined })
   }
 }
 @Injectable()
-export class ApplicationsResolver implements Resolve<Application> {
+export class ApplicationsResolver implements Resolve<Project[]> {
   constructor(private parser: ParserService) { }
 
   resolve(route: ActivatedRouteSnapshot) {
-    return this.parser.getApplication()
+    return this.parser.get({ images: '*' })
   }
 }
 
@@ -35,16 +34,16 @@ export class ApplicationsResolver implements Resolve<Application> {
       },
       {
         path: 'libraries',
-        component: LibrariesComponent,
+        component: ProjectsComponent,
         resolve: {
-          libraries: LibrariesResolver
+          projects: LibrariesResolver
         }
       },
       {
         path: 'applications',
-        component: ApplicationsComponent,
+        component: ProjectsComponent,
         resolve: {
-          applications: ApplicationsResolver
+          projects: ApplicationsResolver
         }
       },
       {

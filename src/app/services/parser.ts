@@ -5,6 +5,8 @@ import 'rxjs/add/operator/map'
 
 import { Project } from 'types'
 
+const WILDCARD: string = '*'
+
 @Injectable()
 export class ParserService {
   constructor(private http: Http) { }
@@ -12,16 +14,25 @@ export class ParserService {
   /**
    * Retrieves projects.
    * 
-   * @param {string} [title] title to filter by
-   * @returns {(Observable<Library | Library[]>)} 
+   * @param {{}} [properties] project properties to filter by, either with a set value or wildcard '*'
+   * @returns {(Observable<Project[]>)} 
    * 
    * @memberof ParserService
    */
-  get(title?: string): Observable<Project | Project[]> {
-    const projects = this.http.get('assets/projects.json').map(res => res.json())
+  get(properties?: {}): Observable<Project[]> {
+    const projects: Observable<Project[]> = this.http.get('assets/projects.json').map(res => res.json())
 
-    return title
-      ? projects.map(projects => projects.filter(p => p.title.indexOf(title) >= 0)[0])
+    return properties
+      ? projects.map(projects => projects.filter(p => {
+        for (let property in properties) {
+          const value = properties[property]
+          const match: boolean = (value === WILDCARD)
+            ? p[property] !== undefined
+            : p[property] == value
+          if (!match) return false
+        }
+        return true
+      }))
       : projects
   }
 }

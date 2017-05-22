@@ -10,8 +10,8 @@ import { ParserService } from 'app/services/parser'
 
 import { RootComponent } from './component'
 import { InfoComponent } from './info/component'
-import { LibrariesComponent } from './libraries/component'
-import { ApplicationsComponent } from './applications/component'
+import { ProjectsComponent } from './projects/component'
+import { ImageBlockComponent } from './image-block/component'
 
 @NgModule({
 	imports: [
@@ -23,9 +23,9 @@ import { ApplicationsComponent } from './applications/component'
 	],
 	declarations: [
 		RootComponent,
-		LibrariesComponent,
-		ApplicationsComponent,
-		InfoComponent
+		InfoComponent,
+		ProjectsComponent,
+		ImageBlockComponent
 	],
 	providers: [
 		ParserService
