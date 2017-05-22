@@ -1,6 +1,4 @@
-:host {
-	display: block;
-
+nav {
 	background-color: #172121;
 	border-bottom: 4px solid #4da167;
 }
@@ -13,4 +11,8 @@ h1 {
 }
 h4 {
 	color: #aad2c8;
+}
+
+#view {
+	padding: 8px;
 }

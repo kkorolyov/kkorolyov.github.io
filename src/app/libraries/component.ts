@@ -4,19 +4,19 @@ import { ActivatedRoute } from '@angular/router'
 import { Project } from 'types'
 
 @Component({
-  selector: 'kgi-project',
+  selector: 'kgi-libraries',
   templateUrl: './template.html',
   styleUrls: ['./styles.css']
 })
-export class ProjectComponent implements OnInit {
-  @Input() project: Project
+export class LibrariesComponent implements OnInit {
+  @Input() libraries: Project[]
 
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.route.data
-      .subscribe((data: { project: Project }) => {
-        this.project = data.project
+      .subscribe((data: { libraries: Project[] }) => {
+        this.libraries = data.libraries
       })
   }
 }

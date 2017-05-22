@@ -6,12 +6,12 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
 
 import { RoutingModule } from 'app/routing'
 
-import { ProjectParserService } from 'app/services/project-parser'
+import { ParserService } from 'app/services/parser'
 
 import { RootComponent } from './component'
-import { NavComponent } from './nav/component'
 import { InfoComponent } from './info/component'
-import { ProjectComponent } from './project/component'
+import { LibrariesComponent } from './libraries/component'
+import { ApplicationsComponent } from './applications/component'
 
 @NgModule({
 	imports: [
@@ -23,12 +23,12 @@ import { ProjectComponent } from './project/component'
 	],
 	declarations: [
 		RootComponent,
-		ProjectComponent,
-		InfoComponent,
-		NavComponent
+		LibrariesComponent,
+		ApplicationsComponent,
+		InfoComponent
 	],
 	providers: [
-		ProjectParserService
+		ParserService
 	],
 	bootstrap: [RootComponent]
 })

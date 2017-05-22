@@ -1,19 +1,28 @@
 import { NgModule, Injectable } from '@angular/core'
 import { RouterModule, ActivatedRouteSnapshot, RouterStateSnapshot, Resolve } from '@angular/router'
 
-import { ProjectParserService } from 'app/services/project-parser'
+import { ParserService } from 'app/services/parser'
 
 import { InfoComponent } from 'app/info/component'
-import { ProjectComponent } from 'app/project/component'
+import { LibrariesComponent } from 'app/libraries/component'
+import { ApplicationsComponent } from 'app/applications/component'
 
-import { Project } from 'types'
+import { Library, Application } from 'types'
 
 @Injectable()
-export class ProjectResolver implements Resolve<Project> {
-  constructor(private parser: ProjectParserService) { }
+export class LibrariesResolver implements Resolve<Library> {
+  constructor(private parser: ParserService) { }
 
   resolve(route: ActivatedRouteSnapshot) {
-    return this.parser.get(route.params.project)
+    return this.parser.getLibrary()
+  }
+}
+@Injectable()
+export class ApplicationsResolver implements Resolve<Application> {
+  constructor(private parser: ParserService) { }
+
+  resolve(route: ActivatedRouteSnapshot) {
+    return this.parser.getApplication()
   }
 }
 
@@ -25,10 +34,17 @@ export class ProjectResolver implements Resolve<Project> {
         component: InfoComponent
       },
       {
-        path: 'project/:project',
-        component: ProjectComponent,
+        path: 'libraries',
+        component: LibrariesComponent,
         resolve: {
-          project: ProjectResolver
+          libraries: LibrariesResolver
+        }
+      },
+      {
+        path: 'applications',
+        component: ApplicationsComponent,
+        resolve: {
+          applications: ApplicationsResolver
         }
       },
       {
@@ -37,7 +53,7 @@ export class ProjectResolver implements Resolve<Project> {
       }
     ])
   ],
-  providers: [ProjectResolver],
+  providers: [LibrariesResolver, ApplicationsResolver],
   exports: [RouterModule]
 })
 export class RoutingModule { }

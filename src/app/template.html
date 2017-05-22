@@ -1,3 +1,30 @@
-<kgi-nav></kgi-nav>
+<nav>
+	<h1>kkorolyov's GitHub Thingies</h1>
 
-<router-outlet></router-outlet>
+	<ngb-tabset #tabs="ngbTabset" (tabChange)="tabChange($event)">
+		<ngb-tab id="info">
+			<ng-template ngbTabTitle>
+				<h4>Info</h4>
+			</ng-template>
+			<ng-template ngbTabContent></ng-template>
+		</ngb-tab>
+
+		<ngb-tab id="libraries">
+			<ng-template ngbTabTitle>
+				<h4>Libraries</h4>
+			</ng-template>
+			<ng-template ngbTabContent></ng-template>
+		</ngb-tab>
+
+		<ngb-tab id="applications">
+			<ng-template ngbTabTitle>
+				<h4>Applications</h4>
+			</ng-template>
+			<ng-template ngbTabContent></ng-template>
+		</ngb-tab>
+	</ngb-tabset>
+</nav>
+
+<div id="view">
+	<router-outlet></router-outlet>
+</div>
