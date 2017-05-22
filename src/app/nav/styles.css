@@ -1,3 +1,10 @@
+:host {
+	display: block;
+
+	background-color: #172121;
+	border-bottom: 4px solid #4da167;
+}
+
 h1 {
 	padding: 8px;
 	
