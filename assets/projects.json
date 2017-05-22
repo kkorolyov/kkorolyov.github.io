@@ -29,14 +29,13 @@
 			"url": "https://bintray.com/kkorolyov/java/sqlob/_latestVersion"
 		}
 	},
-	// Applications
 	{
 		"title": "SQLObViewer",
 		"description": "Swing application providing graphical SQL database access using SQLOb 1.0 library.",
 		"version": "1.1",
 		"github": "https://github.com/kkorolyov/SQLObViewer",
 		"images": [
-			"sqlob-viewer/add-row.png"
+			"assets/sqlob-viewer/add-row.png"
 		]
 	},
 	{
@@ -46,13 +45,13 @@
 		"github": "https://github.com/kkorolyov/ScrumPLE",
 		"website": "https://scrumple.win",
 		"images": [
-			"scrumple/home.png",
-			"scrumple/invite.png",
-			"scrumple/dashboard.png",
-			"scrumple/stories.png",
-			"scrumple/sprints.png",
-			"scrumple/meetings.png",
-			"scrumple/team.png"
+			"assets/scrumple/home.png",
+			"assets/scrumple/invite.png",
+			"assets/scrumple/dashboard.png",
+			"assets/scrumple/stories.png",
+			"assets/scrumple/sprints.png",
+			"assets/scrumple/meetings.png",
+			"assets/scrumple/team.png"
 		]
 	}
 ]
