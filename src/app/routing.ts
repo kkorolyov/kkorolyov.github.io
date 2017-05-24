@@ -3,8 +3,8 @@ import { RouterModule, ActivatedRouteSnapshot, RouterStateSnapshot, Resolve } fr
 
 import { ParserService } from 'app/services/parser'
 
-import { InfoComponent } from 'app/info/component'
-import { ProjectsComponent } from 'app/projects/component'
+import { InfoComponent } from 'app/info/info'
+import { ProjectsComponent } from 'app/projects/projects'
 
 import { Project } from 'types'
 

@@ -1,5 +1,8 @@
 <ngb-accordion [closeOthers]="true">
-	<ngb-panel title="{{project.title}}" *ngFor="let project of projects">
+	<ngb-panel *ngFor="let project of projects">
+		<ng-template ngbPanelTitle>
+			<h5>{{project.title}}</h5>
+		</ng-template>
 		<ng-template ngbPanelContent>
 			<header>
 				<h1>{{project.title}}</h1>

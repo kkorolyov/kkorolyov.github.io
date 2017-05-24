@@ -5,8 +5,8 @@ import { NgbTabset, NgbTabChangeEvent } from '@ng-bootstrap/ng-bootstrap'
 
 @Component({
   selector: 'kgi-root',
-  templateUrl: './template.html',
-  styleUrls: ['./styles.css']
+  templateUrl: './root.html',
+  styleUrls: ['./root.css']
 })
 export class RootComponent implements OnInit, AfterViewInit {
   @ViewChild('tabs') tabs: NgbTabset

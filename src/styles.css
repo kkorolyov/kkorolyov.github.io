@@ -1,16 +1,45 @@
-body, .card {
+body {
 	background-color: #293132;
 	color: #aad2c8;
 	font-family: "Roboto Slab";
 }
 
-ngb-tabset, kgi-project h1 {
+img {
+	vertical-align: top;
+}
+
+ngb-tabset h4, ngb-accordion h5, kgi-projects h1 {
+	color: #aad2c8;
 	font-family: "Megrim";
 	font-weight: bold;
 }
+
 ngb-tabset .nav-tabs, .nav-link {
 	border: none !important;
 }
 ngb-tabset .active {
 	background-color: #4da167 !important;
+}
+
+.card {
+	background-color: inherit;
+}
+
+.card-block {
+	border: 2px solid #4da167;
+}
+
+.card-header {
+	margin: 4px 0 0 0;
+	border-bottom: none;
+	border-radius: 8px 8px !important;
+
+	background-color: #4da167;
+}
+.card-header.active {
+	border-radius: 8px 8px 0 0 !important;
+}
+
+.card-block {
+	border-radius: 0 0 8px 8px;
 }

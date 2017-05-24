@@ -4,9 +4,9 @@ import { ActivatedRoute } from '@angular/router'
 import { Project } from 'types'
 
 @Component({
-  selector: 'kgi-applications',
-  templateUrl: './template.html',
-  styleUrls: ['./styles.css']
+  selector: 'kgi-projects',
+  templateUrl: './projects.html',
+  styleUrls: ['./projects.css']
 })
 export class ProjectsComponent implements OnInit {
   @Input() projects: Project[]

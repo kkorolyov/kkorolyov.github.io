@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'kgi-info',
-  templateUrl: './template.html',
-  styleUrls: ['./styles.css']
+  templateUrl: './info.html',
+  styleUrls: ['./info.css']
 })
 export class InfoComponent { }

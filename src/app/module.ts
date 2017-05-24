@@ -8,10 +8,10 @@ import { RoutingModule } from 'app/routing'
 
 import { ParserService } from 'app/services/parser'
 
-import { RootComponent } from './component'
-import { InfoComponent } from './info/component'
-import { ProjectsComponent } from './projects/component'
-import { ImageBlockComponent } from './image-block/component'
+import { RootComponent } from './root'
+import { InfoComponent } from './info/info'
+import { ProjectsComponent } from './projects/projects'
+import { ImageBlockComponent } from './image-block/image-block'
 
 @NgModule({
 	imports: [
