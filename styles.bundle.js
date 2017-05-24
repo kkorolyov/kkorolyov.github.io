@@ -118,7 +118,7 @@ exports = module.exports = __webpack_require__(21)(false);
 
 
 // module
-exports.push([module.i, "body, .card {\n\tbackground-color: #293132;\n\tcolor: #aad2c8;\n\tfont-family: \"Roboto Slab\";\n}\n\nngb-tabset, kgi-project h1 {\n\tfont-family: \"Megrim\";\n\tfont-weight: bold;\n}\nngb-tabset .nav-tabs, .nav-link {\n\tborder: none !important;\n}\nngb-tabset .active {\n\tbackground-color: #4da167 !important;\n}\n", ""]);
+exports.push([module.i, "body {\n\tbackground-color: #293132;\n\tcolor: #aad2c8;\n\tfont-family: \"Roboto Slab\";\n}\n\nimg {\n\tvertical-align: top;\n}\n\nngb-tabset h4, ngb-accordion h5, kgi-projects h1 {\n\tcolor: #aad2c8;\n\tfont-family: \"Megrim\";\n\tfont-weight: bold;\n}\n\nngb-tabset .nav-tabs, .nav-link {\n\tborder: none !important;\n}\nngb-tabset .active {\n\tbackground-color: #4da167 !important;\n}\n\n.card {\n\tbackground-color: inherit;\n}\n\n.card-block {\n\tborder: 2px solid #4da167;\n}\n\n.card-header {\n\tmargin: 4px 0 0 0;\n\tborder-bottom: none;\n\tborder-radius: 8px 8px !important;\n\n\tbackground-color: #4da167;\n}\n.card-header.active {\n\tborder-radius: 8px 8px 0 0 !important;\n}\n\n.card-block {\n\tborder-radius: 0 0 8px 8px;\n}\n", ""]);
 
 // exports
 
@@ -387,4 +387,3 @@ module.exports = __webpack_require__(159);
 /***/ })
 
 },[268]);
-//# sourceMappingURL=styles.bundle.js.map

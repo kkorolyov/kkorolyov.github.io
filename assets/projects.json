@@ -35,7 +35,20 @@
 		"version": "1.1",
 		"github": "https://github.com/kkorolyov/SQLObViewer",
 		"images": [
-			"assets/sqlob-viewer/add-row.png"
+			"assets/sqlob-viewer/add-row-button.png",
+			"assets/sqlob-viewer/add-row.png",
+			"assets/sqlob-viewer/create-table-button.png",
+			"assets/sqlob-viewer/create-table.png",
+			"assets/sqlob-viewer/delete-row-button.png",
+			"assets/sqlob-viewer/delete-row.png",
+			"assets/sqlob-viewer/drop-table-button.png",
+			"assets/sqlob-viewer/drop-table.png",
+			"assets/sqlob-viewer/edit.png",
+			"assets/sqlob-viewer/grid-selector-3x3.png",
+			"assets/sqlob-viewer/grid-selector.png",
+			"assets/sqlob-viewer/login.png",
+			"assets/sqlob-viewer/options.png",
+			"assets/sqlob-viewer/table.png"
 		]
 	},
 	{
